@@ -22,9 +22,10 @@ from .query import Query
 from .session import _app_ctx_id
 from .session import Session
 from .table import _Table
+from . import types
 
 
-class SQLAlchemy:
+class SQLAlchemy(types.SQLAlchemy):
     """Integrates SQLAlchemy with Flask. This handles setting up one or more engines,
     associating tables and models with specific engines, and cleaning up connections and
     sessions after each request.
